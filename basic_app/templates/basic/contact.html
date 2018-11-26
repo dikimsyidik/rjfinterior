@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Destin || HTML 5 Template</title>
+
+<!-- Stylesheets -->
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+<link href="{% static "css/responsive.css" %}" rel="stylesheet">
+<link rel="icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+
+
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+
+
+    <!-- Main Header -->
+  <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 logo-column">
+                        <h2 style="color: white; padding-top: 10%;">RJF Interior</h2>
+                        <!-- <figure class="logo-box">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </figure> -->
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12 menu-column">
+                        <div class="menu-area">
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->      
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'tentang_kami' %}">Tentang Kami</a></li>
+                                        <li><a href="{% url 'gallery' %}">Galeri</a></li>                     
+                                        <li><a href="{% url 'contact' %}">Kontak</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-sm-12 logo-column">
+                            <h2 style="color: white; padding-top: 10%;">RJF Interior</h2>
+                            <!-- <figure class="small-logo-box">
+                                <a href="index.html"><img src="images/small-logo.png" alt=""></a>
+                            </figure> -->
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 menu-column">
+                            <div class="menu-area">
+                                <nav class="main-menu navbar-expand-lg">
+                                    <div class="navbar-header">
+                                        <!-- Toggle Button -->      
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+                                    <div class="navbar-collapse collapse clearfix">
+                                        <ul class="navigation clearfix">
+                                            <li ><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'tentang_kami' %}">Tentang Kami</a></li>
+                                        <li><a href="{% url 'gallery' %}">Galeri</a></li>                     
+                                        <li class="current"><a href="{% url 'contact' %}">Kontak</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header>
+      <!-- End Main Header -->
+
+
+    <!-- page-title -->
+    <section class="page-title centred" style="background-image: url(/static/images/b4.jpg);">
+        <div class="container">
+            <div class="content-box"><h2>Kontak</h2></div>
+        </div>
+    </section>
+    <!-- page-title end -->
+
+
+    <!-- google-map -->
+    <section class="google-map-section map-style-two">
+        <div class="google-map-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.267178352321!2d107.84869991451188!3d-7.210331372790837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ba86e6e72bbb%3A0x6305811f76e0fec4!2sRisna+Jaya+Furniture+(RJF)!5e0!3m2!1sid!2sid!4v1543029534598" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- google-map end -->
+
+
+    <!-- social-area -->
+    <div class="social-area centred">
+        <div class="container">
+            <ul class="social-list">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- social-area end -->
+
+
+    <!-- contact-section -->
+    <section class="contact-section sec-pad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 contact-column">
+                    <div class="contact-info">
+                        <div class="title"><h4>Alamat</h4></div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-map-marker"></i></div>
+                            <div class="text">
+                                <ul>
+                                    <li style="margin-top: -10px;">Kantor 1 : Limus pratama regency Blok M2 No 15 Cilengsi Kab Bogor</li>
+                                    <li>Kantor 2 : Jl Raya Garut-Samarang, Ciroyom No 30 RT 1 RW 2 Kab Garut</li>
+                                </ul>
+                                </div>
+                        </div>
+                        <div class="title"><h4>Telepon</h4></div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-phone"></i></div>
+                            <div class="text">082338015630</div>
+                        </div>
+                        <div class="title"><h4>Mail</h4></div>
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fa fa-envelope"></i></div>
+                            <div class="text">Ardipratama1@yahoo.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 contact-column">
+                    <div class="contact-form-area">
+                        <div class="title"><h4>Komentar dan Saran</h4></div>
+                        <div class="text">Komentar dan saran anda sangat membantu kami dalam perbaikan dan pengembangan perusahaan, silahkan berkomentar</div>
+                        <form id="contact-form" name="contact_form" class="default-form" action="http://azim.commonsupport.com/Destin/inc/sendmail.php" method="post">
+                            <div class="row">
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <input type="text" name="form_name" value="" placeholder="Nama *" required="">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <input type="email" name="form_email" value="" placeholder="Email *" required="">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <input type="text" name="form_subject" value="" placeholder="No.HP" required="">
+                                </div>
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="select-box">
+                                        <select name="Property" class="selectpicker">
+                                            <option>Backdrop</option>
+                                            <option>Kitchen Set</option>
+                                            <option>Front Office</option>
+                                            <option>Meja Meeting</option>
+                                            <option>Rak</option>
+                                            <option>Tangga</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <textarea placeholder="Tulis pesan . . ." name="form_message" required=""></textarea>
+                                </div>
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <button type="submit" class="theme-btn" data-loading-text="Please wait...">Kirim</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-section end -->
+
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 footer-column">
+                    <div class="about-widget footer-widget" style="padding-right: 30px;">
+                        <div class="footer-title"><h4>ABOUT US</h4></div>
+                        <div class="text" style="text-align: justify;">
+                            Kami adalah perusahaan yang bergerak di bidang jasa pembuatan produk-produk Interior dan Furniture dengan ukuran dan desian dari anda atau dari kami, Untuk Rumah tinggal, Hotel, Restaurant ,Café,apartment dll. Kami akan menggambarkan ruangan anda dengan gambar 3D, Layout ,gambar 2D. Selain itu juga kami bisa mendesain dengan mengikuti budget anda.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-post footer-widget" style="padding-bottom: 30px;">
+                        <div class="footer-title"><h4>Temukan Kami</h4></div>
+                        <div class="contact-info">
+                            <div class="single-item">
+                                <div class="icon-box"><i class="fa fa-phone"></i> 082338015630</div>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box"><i class="fa fa-whatsapp"></i> 082338015630</div>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li> <span><i class="fa fa-map-marker"></i></span> Kantor 1: Limus pratama regency Blok M2 No 15 Cilengsi Kab Bogor</li>
+                                        <li>Kantor 2 : Jl Raya Garut-Samarang, Ciroyom No 30 RT 1 RW 2 Kab Garut</li>
+                                    </ul>                                
+                                </div>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box"><i class="fa fa-envelope"></i> Ardipratama1@yahoo.com</div>
+                            </div>
+                        </div>
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                    <div class="link-widget footer-widget">
+                        <div class="footer-title"><h4>USEFULL LINKS</h4></div>
+                        <ul class="list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">Tentang Kami</a></li>
+                            <li><a href="gallery.html">Galeri</a></li>
+                            <li><a href="contact.html">Kontak</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+
+    <!-- footer-bottom -->
+    <div class="footer-bottom centred">
+        <div class="container">
+            <div class="copyright"><a href="templatespoint.net">Supported By : Pastel Programmer</a></div>
+        </div>
+    </div>
+    <!-- footer-bottom end -->
+
+
+<!--Scroll to top-->
+<div class="scroll-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+
+
+
+<!--jquery js -->
+<script type="text/javascript" src="{% static "js/jquery-2.1.4.js" %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/owl.carousel.min.js" %}"></script>
+<script src="{% static "js/wow.js" %}"></script>
+<script src="{% static "js/validation.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.pack.js" %}"></script>
+<script type="text/javascript" src="{% static "js/SmoothScroll.js" %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZQiiFTOGpm2qHVZmZY1s-aEnmHDhqKgk"></script>
+<script src="{% static "js/isotope.js" %}"></script>
+<script src="{% static "js/gmaps.js" %}"></script>
+<script src="{% static "js/map-helper.js" %}"></script>
+
+<!-- main-js -->
+<script src="{% static "js/script.js" %}"></script>
+
+</body><!-- End of .page_wrapper -->
+
+</html>

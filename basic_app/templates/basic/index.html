@@ -1,0 +1,753 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RJF Interior</title>
+
+<!-- Stylesheets -->
+<link href="{% static "css/style.css" %}" rel="stylesheet">
+<link href="{% static "css/responsive.css" %}" rel="stylesheet">
+<link rel="icon" href="{% static "images/favicon.ico" %}" type="image/x-icon">
+
+</head>
+
+<!-- page wrapper -->
+<body class="boxed_wrapper">
+
+
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 logo-column">
+                        <h2 style="color: white; padding-top: 10%;">RJF Interior</h2>
+                        <!-- <figure class="logo-box">
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        </figure> -->
+                    </div>
+                    <div class="col-lg-9 col-md-12 col-sm-12 menu-column">
+                        <div class="menu-area">
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->      
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'tentang_kami' %}">Tentang Kami</a></li>
+                                        <li><a href="{% url 'gallery' %}">Galeri</a></li>                     
+                                        <li><a href="{% url 'contact' %}">Kontak</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-12 col-sm-12 logo-column">
+                            <h2 style="color: white; padding-top: 10%;">RJF Interior</h2>
+                            <!-- <figure class="small-logo-box">
+                                <a href="index.html"><img src="images/small-logo.png" alt=""></a>
+                            </figure> -->
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 menu-column">
+                            <div class="menu-area">
+                                <nav class="main-menu navbar-expand-lg">
+                                    <div class="navbar-header">
+                                        <!-- Toggle Button -->      
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+                                    <div class="navbar-collapse collapse clearfix">
+                                        <ul class="navigation clearfix">
+                                            <li class="current"><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'tentang_kami' %}">Tentang Kami</a></li>
+                                        <li><a href="{% url 'gallery' %}">Galeri</a></li>                     
+                                        <li><a href="{% url 'contact' %}">Kontak</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header>
+    <!-- End Main Header -->
+
+
+    <!-- Main slider -->
+    <section class="main-slider">
+        <div class="container-fluid">
+            <ul class="main-slider-carousel owl-carousel owl-theme slide-nav">
+                <li class="slider-wrapper">
+                    <div class="image"><img src="{% static "images/7.jpg" %}" alt=""></div>
+                    <div class="slider-caption">
+                        <div class="container">
+                            <div class="slider-content">
+                                <div class="title">RJF Interior</div>
+                                <div class="text">Limus pratama regency Blok M2 No 15 Cilengsi Kab Bogor</div>
+                                <div class="motto">Terpercaya</div>
+                                <div class="link"><a href="gallery.html">Selengkapnya</a></div>
+                            </div>
+                        </div>                             
+                    </div>
+                    <div class="slide-overlay"></div>
+                </li>
+                <li class="slider-wrapper">
+                    <div class="image"><img src="{% static "images/10.jpg" %}" alt=""></div>
+                    <div class="slider-caption">
+                        <div class="container">
+                            <div class="slider-content">
+                                <div class="title">RJF Interior</div>
+                                <div class="text">Jl Raya Garut-Samarang, Ciroyom No 30 RT 1 RW 2 Kab Garut</div>
+                                <div class="motto">Terpercaya</div>
+                                <div class="link"><a href="">Selengkapnya</a></div>
+                            </div>
+                        </div>                            
+                    </div>
+                    <div class="slide-overlay"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- main-slider end -->
+
+
+    <!-- about-section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-10 col-sm-12">
+                    <figure class="img-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="{% static "images/b3.jpg" %}" alt=""></figure>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-content">
+                        <h2>Tentang Kami</h2>
+                        <div class="text" style="text-align: justify;">
+                            <p>Kami adalah jasa pembuatan produk-produk Interior dan Furniture dengan ukuran dan desian dari anda atau dari kami, Untuk Rumah tinggal, Hotel, Restaurant ,Café,apartment dll. Kami akan menggambarkan ruangan anda dengan gambar 3D, Layout ,gambar 2D ,  gambar kerjadan bill of quantity sehingga anda dapat mengetahui perkerjaan dari awal sampai akhir dan mengetahui budget yang akan di keluarkan, selain itu juga kami bisa mendesain dengan mengikuti budget anda. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-section end -->
+
+
+    <!-- intro-section -->
+   <section class="intro-section">
+        <div class="container">
+            <h2 style="text-align: center;">Kami Mendekorasi</h2>
+            <ul class="intro-content clearfix">
+                <li class="single-item">
+                    <div class="content-box">
+                        <div class="icon-box"><i class="fa fa-home"></i></div>
+                        <div class="text">Backdrop</div>
+                    </div>
+                </li>
+                <li class="single-item">
+                    <div class="content-box">
+                        <div class="icon-box"><i class="flaticon-bed"></i></div>
+                        <div class="text">Kamar Tidur</div>
+                    </div>
+                </li>
+                <li class="single-item">
+                    <div class="content-box">
+                        <div class="icon-box"><i class="fa fa-tv"></i></div>
+                        <div class="text">Ruang Keluarga</div>
+                    </div>
+                </li>
+                <li class="single-item">
+                    <div class="content-box">
+                        <div class="icon-box"><i class="fa fa-hotel"></i></div>
+                        <div class="text">Hotel/Apartemen</div>
+                    </div>
+                </li>
+                <li class="single-item">
+                    <div class="content-box">
+                        <div class="icon-box"><i class="fa fa-coffee"></i></div>
+                        <div class="text">Cafe/Resto</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+     <!-- intro-section end -->
+
+
+    <!-- property-highlight -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="sec-title centred" style="padding-bottom: 5%">Kenapa Harus RJF Interior?</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="fa fa-dollar"></i></div>
+                        <h4>Harga Bersahabat</h4>
+                        <div class="text text-justify">Desain yang kami buat dapat mengikuti budget yang anda tentukan dengan desain maksimal sesuai kebutuhan anda</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="fa fa-user"></i></div>
+                        <h4>Designer Professional</h4>
+                        <div class="text text-justify">Kami memiliki designer handal dan terampil dalam mengembangkan design</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="fa fa-eraser"></i></div>
+                        <h4>Desain Keinginan Anda</h4>
+                        <div class="text text-justify">Anda bisa menentukan desain yang anda inginkan</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="flaticon-shield"></i></div>
+                        <h4>Berkualitas</h4>
+                        <div class="text text-justify">Kami memiliki rekam jejak yang baik dan rapi</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="fa fa-users"></i></div>
+                        <h4>Tim yang Solid</h4>
+                        <div class="text text-justify">Tim kami yang solid selam bertahun-tahun selalu menampilkan hasil yang memuaskan</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="single-item">
+                        <div class="icon-box"><i class="fa fa-angellist"></i></div>
+                        <h4>Layanan Bersahabat</h4>
+                        <div class="text text-justify">Kami siap melayani anda, kepuasan anda adalah kepuasan kami.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- property-highlight end -->
+    <section class="property-highlight">
+        <div class="container">
+            <div class="row">
+                <div class="highlight-content">
+                    <h3 style="text-align: center; padding-bottom: 5%;">Keunggulan Produk Kami</h3>
+                    <div class="top-text" style="text-align: center;">
+                    <div class="content-box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-item">
+                                    <figure class="img-box"><img style="width: 100%;height: 200px;" src="{% static "images/7.jpg" %}" alt=""></figure>
+                                    <div class="lower-content">
+                                        <h4>Desain Modern</h4>
+                                        <div class="text">Dengan designer profesional dan terampil, membuat desain produk kami begitu modern</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-item">
+                                    <figure class="img-box"><img style="width: 100%;height: 200px;" src="{% static "images/10.jpg" %}" alt=""></figure>
+                                    <div class="lower-content">
+                                        <h4>Bahan Berkualitas</h4>
+                                        <div class="text">Menggunakan bahan-bahan pilihan dan berkualitas</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <div class="single-item">
+                                    <figure class="img-box"><img style="width: 100%;height: 200px;" src="{% static "images/12.jpg" %}" alt=""></figure>
+                                    <div class="lower-content">
+                                        <h4>Tahan Lama</h4>
+                                        <div class="text">Dengan bahan-bahan pilihan dan berkualitas membuat produk dari kami tahan lama</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- destin-details -->
+    <section class="destin-details">
+        <div class="container">
+            <h2 class="sec-title centred">Produk Unggulan</h2>
+            <div class="title-text centred">Dari beberapa produk, kami memiliki beberapa produk unggulan (terlaris selama 1 tahun terakhir)</div>
+            <div class="custom-tab-title centred">
+                <ul class="tab-title clearfix">
+                    <li data-tab-name="details" class="active">Backdrop</li>
+                    <li data-tab-name="review">Kitchen Set</li>
+                    <li data-tab-name="review1">Front Office</li>
+                </ul>
+            </div>
+            <div class="tab-details-content">
+                <div class="tab-content" id="details">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <figure class="img-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="{% static "images/5.jpeg" %}" alt=""></figure>
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                            <div class="content-box">
+                                <h4>Backdrop</h4>
+                                <div class="text">
+                                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                                </div>
+                                <ul class="list"> 
+                                    <li>Water Strg : 5000/ltr</li>
+                                    <li>Bathroom : 2</li>
+                                    <li>Bedrooms : 2</li>
+                                    <li>No of Stair : 4</li>
+                                    <li>Parking Capacity : 4</li>
+                                    <li>No of Floors : 2</li>
+                                    <li>No Air Condition : 2</li>
+                                    <li>No of Kitchen : 1</li>
+                                    <li>Swimming Pool : 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="review">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <figure class="img-box"><img src="{% static "images/18.jpg" %}" alt=""></figure>
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                            <div class="content-box">
+                                <h4>Kitchen Set</h4>
+                                <div class="text">
+                                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                                </div>
+                                <ul class="list"> 
+                                    <li>Water Strg : 5000/ltr</li>
+                                    <li>Bathroom : 2</li>
+                                    <li>Bedrooms : 2</li>
+                                    <li>No of Stair : 4</li>
+                                    <li>Parking Capacity : 4</li>
+                                    <li>No of Floors : 2</li>
+                                    <li>No Air Condition : 2</li>
+                                    <li>No of Kitchen : 1</li>
+                                    <li>Swimming Pool : 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="review1">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <figure class="img-box"><img src="{% static "images/6.jpg" %}" alt=""></figure>
+                        </div>
+                        <div class="col-lg-7 col-md-12 col-sm-12">
+                            <div class="content-box">
+                                <h4>Front Office</h4>
+                                <div class="text">
+                                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                                </div>
+                                <ul class="list"> 
+                                    <li>Water Strg : 5000/ltr</li>
+                                    <li>Bathroom : 2</li>
+                                    <li>Bedrooms : 2</li>
+                                    <li>No of Stair : 4</li>
+                                    <li>Parking Capacity : 4</li>
+                                    <li>No of Floors : 2</li>
+                                    <li>No Air Condition : 2</li>
+                                    <li>No of Kitchen : 1</li>
+                                    <li>Swimming Pool : 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- destin-details end -->
+
+
+    <!-- features-section -->
+    <!-- features-section end -->
+
+
+    <!-- gallery-section -->
+    <section class="gallery-section sec-pad">
+        <div class="container">
+            <h2 class="sec-title centred">Galeri Foto</h2>
+            <div class="title-text centred">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,<br />sed quia consequuntur magni dolores eos qui ratione</div>
+            <div class="sortable-masonry mixed-gallery-section">
+                <ul class="filter-tabs filter-btns post-filter centred">
+                    <li class="active filter" data-role="button" data-filter=".all">BackDrop</li>
+                    <li class="filter" data-role="button" data-filter=".branding">Bed Room</li>
+                    <li class="filter" data-role="button" data-filter=".design">Living Room</li>
+                    <li class="filter" data-role="button" data-filter=".development">Meja Meeting</li>
+                    <li class="filter" data-role="button" data-filter=".others">Front Office</li>
+                    <li class="filter" data-role="button" data-filter=".rak">Rak</li>
+                    <li class="filter" data-role="button" data-filter=".tangga">Tangga</li>
+                </ul>
+                <div class="row items-container clearfix">
+                    {% for br in backdrop %}
+                
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item all">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ br.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ br.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ br.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for a in foto %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item branding">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ a.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ a.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ a.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>{% endfor %}
+                    {% for meja in meja_meeting %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item development">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ meja.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ meja.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ meja.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for front in front_office %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item others">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ front.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ front.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{ front.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for dirak in rak %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item rak">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ dirak.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ dirak.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ dirak.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for tang in tangga %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item tangga">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ tang.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ tang.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ tang.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- gallery-section end -->
+
+
+    <!-- our-agent -->
+    <section class="our-agent centred">
+        <div class="container">
+            <h2 class="sec-title">Tim Kami</h2>
+            <div class="title-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed<br />quia consequuntur magni dolores eos qui ratione</div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
+                    <div class="single-item">
+                        <ul class="agent-social">
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                        <figure class="img-box"><a href="#"><img src="images/resource/team-1.jpg" alt=""></a></figure>
+                        <div class="lower-content">
+                            <h4><a href="#">Alvis Milan</a></h4>
+                            <div class="text">Real estate agent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
+                    <div class="single-item">
+                        <ul class="agent-social">
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                        <figure class="img-box"><a href="#"><img src="images/resource/team-2.jpg" alt=""></a></figure>
+                        <div class="lower-content">
+                            <h4><a href="#">Jhon Doe</a></h4>
+                            <div class="text">Real estate agent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
+                    <div class="single-item">
+                        <ul class="agent-social">
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                        <figure class="img-box"><a href="#"><img src="images/resource/team-3.jpg" alt=""></a></figure>
+                        <div class="lower-content">
+                            <h4><a href="#">Hugo Smith</a></h4>
+                            <div class="text">Real estate agent</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
+                    <div class="single-item">
+                        <ul class="agent-social">
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                        <figure class="img-box"><a href="#"><img src="images/resource/team-4.jpg" alt=""></a></figure>
+                        <div class="lower-content">
+                            <h4><a href="#">Jenny Salvia</a></h4>
+                            <div class="text">Real estate agent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our-agent end -->
+
+
+    <!-- testimonial-section -->
+   <section class="testimonial-section sec-pad centred" style="background-image: url(static/images/b3.jpg);">
+        <div class="container">
+            <h2 class="sec-title" style="padding-bottom: 5%">Testimoinal</h2>
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12 offset-lg-2">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-content">
+                            <div class="author-info">
+                                <h4>Andri, Manager Bambu Cafe</h4>
+                                <h6 style="color: #c4c413">Kitchen Set, Bambu Cafe</h6>
+                            </div>
+                            <div class="text">
+                                Saya puas dengan kitchenset dari RJF, pengerjaannya cepat, desain modern. Sukses buat RJF Interior
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="author-info">
+                                <h4>Selia, Mahasiswa</h4>
+                                <h6 style="color: #c4c413">Rak Buku, Garut</h6>
+                            </div>
+                            <div class="text">
+                                Terima kasih RJF Interior, sekarang saya punya rak buku yang kekinian, harganya juga terjangkau.
+                            </div>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="author-info">
+                                <h4>Hendra, Wiraswasta</h4>
+                                <h6 style="color: #c4c413">Backdrop TV, Garut</h6>
+                            </div>
+                            <div class="text">
+                                Terima kasih RJF Interior sudah buatkan saya backdrop yang bagus dengan harga yang pas dikantong saya.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- testimonial-section end -->
+
+    <!-- google-map -->
+    <section class="google-map-section map-style-two">
+        <div class="google-map-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.267178352321!2d107.84869991451188!3d-7.210331372790837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ba86e6e72bbb%3A0x6305811f76e0fec4!2sRisna+Jaya+Furniture+(RJF)!5e0!3m2!1sid!2sid!4v1543029534598" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- google-map end -->
+
+    <!-- main-footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="about-widget footer-widget">
+                        <div class="footer-title"><h4>RJF Interior</h4></div>
+                        <div class="text" style="text-align: justify;">
+                            Kami adalah jasa pembuatan produk-produk Interior dan Furniture dengan ukuran dan desian dari anda atau dari kami, Untuk Rumah tinggal, Hotel, Restaurant ,Café,apartment dll. Kami akan menggambarkan ruangan anda dengan gambar 3D, Layout ,gambar 2D. Selain itu juga kami bisa mendesain dengan mengikuti budget anda.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-post footer-widget">
+                        <div class="footer-title"><h4>Temukan Kami</h4></div>
+                        <div class="contact-info">
+                            <div class="single-item">
+                                <div class="icon-box"><i class="fa fa-phone"></i> 082338015630</div>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box">
+                                    <ul>
+                                        <li> <span><i class="fa fa-map-marker"></i></span> Kantor 1: Limus pratama regency Blok M2 No 15 Cilengsi Kab Bogor</li>
+                                        <li>Kantor 2 : Jl Raya Garut-Samarang, Ciroyom No 30 RT 1 RW 2 Kab Garut</li>
+                                    </ul>                                
+                                </div>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box"><i class="fa fa-envelope"></i> Ardipratama1@yahoo.com</div>
+                            </div>
+                        </div>
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-widget">
+                    <div class="link-widget footer-widget">
+                        <div class="footer-title"><h4>USEFULL LINKS</h4></div>
+                        <ul class="list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+
+    <!-- footer-bottom -->
+    <div class="footer-bottom centred">
+        <div class="container">
+            <div class="copyright"><a href="templatespoint.net">Supported By : Pastel Programmer</a></div>
+        </div>
+    </div>
+    <!-- footer-bottom end -->
+
+
+<!--Scroll to top-->
+<div class="scroll-top scroll-to-target" data-target=".main-header"><span class="icon fa fa-angle-up"></span></div>
+
+
+<!--jquery js -->
+<script type="text/javascript" src="{% static "js/jquery-2.1.4.js" %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/owl.carousel.min.js" %}"></script>
+<script src="{% static "js/wow.js" %}"></script>
+<script src="{% static "js/validation.js" %}"></script>
+<script src="{% static "js/jquery.fancybox.pack.js" %}"></script>
+<script type="text/javascript" src="{% static "js/SmoothScroll.js" %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZQiiFTOGpm2qHVZmZY1s-aEnmHDhqKgk"></script>
+<script src="{% static "js/isotope.js" %}"></script>
+<script src="{% static "js/gmaps.js" %}"></script>
+<script src="{% static "js/map-helper.js" %}"></script>
+
+<!-- main-js -->
+<script src="{% static "js/script.js" %}"></script>
+
+</body><!-- End of .page_wrapper -->
+
+</html>
