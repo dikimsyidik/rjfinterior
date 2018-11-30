@@ -57,18 +57,6 @@
 
                     <!--ADMIN SETTINGS SECTIONS -->
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="icon-user "></i>&nbsp; <i class="icon-chevron-down "></i>
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-user">
-                         <li class="divider"></li>
-                            <li><a href="{% url 'logout' %}"><i class="icon-signout"></i> Logout </a>
-                            </li>
-                        </ul>
-
-                    </li>
                     <!--END ADMIN SETTINGS -->
                 </ul>
 
@@ -117,11 +105,11 @@
                         <span class="pull-right">
                           <i class="icon-angle-left"></i>
                         </span>
-                       &nbsp; <span class="label label-default">10</span>&nbsp;
+                    
                     </a>
                     <ul class="collapse" id="component-nav">
                        
-                        <li class=""><a href="button.html"><i class="icon-angle-right"></i> Edit Profil </a></li>
+                        <li class=""><a href=""><i class="icon-angle-right"></i> Edit Profil </a></li>
                                                
                     </ul>
                 </li>
@@ -136,20 +124,10 @@
                         <li class=""><a href="{% url 'dashboard' %}"><i class="icon-angle-right"></i>List Gallery </a></li>
                     </ul>
                 </li>
-                <li class="panel ">
-                    <a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle collapsed" data-target="#kontak-nav">
-                        <i class="icon-pencil"></i> Kontak
-       
-                       
-                    </a>
-                    <ul class="collapse" id="kontak-nav">
-                        <li class=""><a href="forms_editors.html"><i class="icon-angle-right"></i>Testimoni </a></li>
-                        <li class=""><a href="forms_editors.html"><i class="icon-angle-right"></i>Edit Kontak </a></li>
-                    </ul>
-                </li>
+               
 
 
-                <li><a href="login.html"><i class="icon-signin"></i> Login Page </a></li>
+                <li><a href="{% url 'logout' %}"><i class="icon-signout"></i> Logout </a>
 
             </ul>
 
@@ -169,9 +147,6 @@
      <!--END MAIN WRAPPER -->
 
    <!-- FOOTER -->
-    <div id="footer">
-        <p>&copy;  binarytheme &nbsp;2014 &nbsp;</p>
-    </div>
     <!--END FOOTER -->
      <!-- GLOBAL SCRIPTS -->
     <script src="{% static "assets/plugins/jquery-2.0.3.min.js" %}"></script>

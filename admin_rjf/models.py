@@ -31,45 +31,58 @@ class Gallery_Foto(models.Model):
 
 	def __str__(self):
 		return self.produk
-class Produk_Unggulan(models.Model):
-	foto = models.ImageField(default='default.jpg', upload_to=path_and_rename)
+class Profil(models.Model):
+	# tentang kami 
+	nama_profil = models.CharField(max_length=100,default='profilnya')
+
+	foto_perusahaan = models.ImageField(default='default.jpg', upload_to=path_and_rename)
+	deskripsi_perusahaan = models.TextField()
 	
+	#produk unggulan
+	foto1 = models.ImageField(default='default.jpg', upload_to=path_and_rename)
+	nama_produk = models.CharField(max_length=100)
+	deskripsi_produk = models.TextField()
 
-	judul =  models.CharField(max_length=100)
+	foto2 = models.ImageField(default='default.jpg', upload_to=path_and_rename)
+	nama_produk2 = models.CharField(max_length=100)
+	deskripsi_produk2 = models.TextField()
 
-	deskripsi = models.TextField()
-	def __str__(self):
-		return self.judul
+	foto3 = models.ImageField(default='default.jpg', upload_to=path_and_rename)
+	nama_produk3 = models.CharField(max_length=100)
+	deskripsi_produk3 = models.TextField()
 
-
-class Testimoni(models.Model):
-	"""docstring for Testimonial"""
-	
-
-	nama = models.CharField(max_length=100)
-
+	#testimonial
+	nama_dan_pekerjaan = models.CharField(max_length=100)
 	project_dan_asal = models.CharField(max_length=100)
-
-
 	komentar = models.TextField()
 
-	def __str__(self):
-		return self.nama
+	nama_dan_pekerjaan2 = models.CharField(max_length=100)
+	project_dan_asal2 = models.CharField(max_length=100)
+	komentar2 = models.TextField()
 
-class Kontak(models.Model):
+	nama_dan_pekerjaan3 = models.CharField(max_length=100)
+	project_dan_asal3 = models.CharField(max_length=100)
+	komentar3 = models.TextField()
 
+
+	#kontak
 
 	alamat = models.CharField(max_length=100)
 
 	no_hp = models.CharField(max_length=100)
+	whatsapp =models.CharField(max_length=100)
 
 	email = models.EmailField(max_length=100)
 
-
+	#media sosial
 	facebook = models.URLField()
 	twitter = models.URLField()
 	instagram =  models.URLField()
 	google_plus =  models.URLField()
+
+	def __str__(self):
+		return self.nama_profil
+
 	
 
 

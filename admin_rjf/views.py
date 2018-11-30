@@ -1,14 +1,15 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponseRedirect
 # Create your views here.
-from .forms import TambahFoto_Form
-from .models import Gallery_Foto
+from .forms import TambahFoto_Form,Profil_Edit_Form
+from .models import Gallery_Foto,Profil
 from django.contrib.auth import logout
 
 def logout_views(request):
     logout(request)
     return HttpResponseRedirect('/dashboard/')
+
 
 def dashboard(request):
 	form = TambahFoto_Form(request.POST,request.FILES or None)
@@ -20,9 +21,11 @@ def dashboard(request):
 
 	template = 'admin_rjf/tambah_gallery.html'
 	context = {'form':form}
+
 	return render(request, template, context)
 def login(request):
 	form = TambahFoto_Form(request.POST,request.FILES or None)
+
 	if form.is_valid():
 		obj = form.save(commit=False)
 		print(obj)
@@ -57,9 +60,46 @@ def list_gallery(request):
 def hapus_foto(request,list_gallery_id):
 	objectnya =  Gallery_Foto.objects.get(id=list_gallery_id)
 	
-	objectnya.delete()
+	objectnya.delete()	
 
 	return HttpResponseRedirect('/dashboard/')
+
+def profil_edit(request, id=None):
+    obj = get_object_or_404(Profil, id=id)
+    form = Profil_Edit_Form(request.POST or None, instance=obj)
+	    
+    context = {
+        "form": form
+    }
+    if form.is_valid():
+    	form = Profil_Edit_Form(request.POST,request.FILES or None, instance=obj)
+    	obj = form.save(commit=True)
+    	print(obj)
+    	obj.save()
+    	return HttpResponseRedirect('/dashboard/')
+    template = "admin_rjf/edit2.html"
+    return render(request, template, context)
+
+def buat_profil(request):
+	form = Profil_Edit_Form(request.POST,request.FILES or None)
+	if form.is_valid():
+		obj = form.save(commit=False)
+		print(obj)
+		obj.save()
+		return HttpResponseRedirect('/dashboard/')
+	else:
+		form = Profil_Edit_Form()
+
+	template = 'admin_rjf/buat_profil.html'
+	context = {
+         "form": form
+    }
+
+	
+
+
+	return render(request, template, context)
+
 
 
 

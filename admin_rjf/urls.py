@@ -3,6 +3,8 @@ from .views import (
     dashboard,
     list_gallery,
     hapus_foto,
+    profil_edit,
+    buat_profil,
    
   
     )
@@ -11,6 +13,10 @@ urlpatterns = [
     path('tambah_gallery/', dashboard, name='tambah_foto'),
     path('', list_gallery, name='dashboard'),
     path('hapus/<int:list_gallery_id>', hapus_foto, name='hapus_foto'),
+    path('<int:id>/', profil_edit, name='profil_edit'),
+    path('buat_profil/', buat_profil, name='buat_profil'),
+
+
 
 
 
