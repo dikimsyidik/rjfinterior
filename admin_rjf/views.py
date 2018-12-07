@@ -1,18 +1,23 @@
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse 
 # Create your views here.
-from .forms import TambahFoto_Form,Profil_Edit_Form
+from .forms import TambahFoto_Form,Profil_Edit_Form,LoginForm
 from .models import Gallery_Foto,Profil
-from django.contrib.auth import logout
+from django.contrib.auth import logout,login,get_user_model
+
+User = get_user_model()
 
 def logout_views(request):
     logout(request)
-    return HttpResponseRedirect('/dashboard/')
+    return HttpResponseRedirect('/')
 
-
+@login_required
 def dashboard(request):
 	form = TambahFoto_Form(request.POST,request.FILES or None)
+
 	if form.is_valid():
 		obj = form.save(commit=False)
 		print(obj)
@@ -23,18 +28,8 @@ def dashboard(request):
 	context = {'form':form}
 
 	return render(request, template, context)
-def login(request):
-	form = TambahFoto_Form(request.POST,request.FILES or None)
 
-	if form.is_valid():
-		obj = form.save(commit=False)
-		print(obj)
-		obj.save()
-		return HttpResponseRedirect('list_gallery/')
-
-	template = 'admin_rjf/tambah_gallery.html'
-	context = {'form':form}
-	return render(request, template, context)
+@login_required
 def list_gallery(request):
 	images = Gallery_Foto.objects.all()
 
@@ -45,6 +40,7 @@ def list_gallery(request):
 	rak = Gallery_Foto.objects.filter(kategori='Rak')
 	tangga = Gallery_Foto.objects.filter(kategori='tangga')
 	template = 'admin_rjf/list_gallery.html'
+	print(request.user.is_authenticated)
 
 
 	context = {
@@ -57,6 +53,8 @@ def list_gallery(request):
 		'images':images
 		}
 	return render(request, template, context)
+
+@login_required
 def hapus_foto(request,list_gallery_id):
 	objectnya =  Gallery_Foto.objects.get(id=list_gallery_id)
 	
@@ -64,7 +62,8 @@ def hapus_foto(request,list_gallery_id):
 
 	return HttpResponseRedirect('/dashboard/')
 
-def profil_edit(request, id=None):
+@login_required
+def profil_edit(request, id=2):
     obj = get_object_or_404(Profil, id=id)
     form = Profil_Edit_Form(request.POST or None, instance=obj)
 	    
@@ -79,29 +78,5 @@ def profil_edit(request, id=None):
     	return HttpResponseRedirect('/dashboard/')
     template = "admin_rjf/edit2.html"
     return render(request, template, context)
-
-def buat_profil(request):
-	form = Profil_Edit_Form(request.POST,request.FILES or None)
-	if form.is_valid():
-		obj = form.save(commit=False)
-		print(obj)
-		obj.save()
-		return HttpResponseRedirect('/dashboard/')
-	else:
-		form = Profil_Edit_Form()
-
-	template = 'admin_rjf/buat_profil.html'
-	context = {
-         "form": form
-    }
-
-	
-
-
-	return render(request, template, context)
-
-
-
-
 
 

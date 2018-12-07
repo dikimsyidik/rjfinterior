@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from basic_app.views import index,contact,gallery,tentang_kami
-from admin_rjf.views import logout_views
+from admin_rjf.views import logout_views,login
+from django.contrib.auth import views as auth_views
+
 
 
 urlpatterns = [
@@ -26,7 +28,10 @@ urlpatterns = [
     path('tentang_kami/',tentang_kami,name='tentang_kami'),
     path('gallery/',gallery,name='gallery'),
     path('contact/',contact,name='contact'),
-
+    # path('login/',login,name='login'),
+    
     path('dashboard/', include('admin_rjf.urls')),
+
+    path('login/', auth_views.LoginView.as_view(template_name="admin_rjf/login_view.html"), name='login'),
 
 ]

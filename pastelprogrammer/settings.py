@@ -25,10 +25,11 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 SECRET_KEY = '-0%cbvdf9y=gq(^@874+^+xcv9t+22d$fj74#v19idj#=9f3de'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['-']
-LOGIN_URL = "/adm/"
+ALLOWED_HOSTS = ['rjfinteriorgarut.herokuapp.com']
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = '/dashboard/'
 
 
 # Application definition

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-from admin_rjf.models import Gallery_Foto
+from admin_rjf.models import Gallery_Foto,Profil
+
 def index(requset):
 	backdrop = Gallery_Foto.objects.filter(kategori='backdrop')
 	meja_meeting = Gallery_Foto.objects.filter(kategori='meja_meeting')
@@ -10,7 +11,8 @@ def index(requset):
 	rak = Gallery_Foto.objects.filter(kategori='Rak')
 	tangga = Gallery_Foto.objects.filter(kategori='tangga')
 
-	
+	profil = Profil.objects.all()
+
 	template = 'basic/index.html'
 	context = {
 		'backdrop':backdrop,		
@@ -19,6 +21,7 @@ def index(requset):
 		'front_office':front_office,
 		'rak':rak,
 		'tangga':tangga,
+		'profil':profil,
 		}
 	print(type(rak))
 	print(bedroom)

@@ -1,7 +1,27 @@
 from django import forms
-
+from django.contrib.auth import authenticate,get_user_model
 
 from .models import Gallery_Foto,Profil
+
+
+User = get_user_model()
+
+class LoginForm(forms.Form):
+
+	username = forms.CharField(label='username')
+	password = forms.CharField(label='password',widget=forms.PasswordInput)
+
+	def clean(self,*args,**kwargs):
+		username = self.cleaned_data.get("username")
+		password = self.cleaned_data.get("password")
+		user_obj = User.objects.filter(username=username).first()
+
+		if not user_obj:
+			raise forms.ValidationError("invalid username")
+		else:
+			if not user_obj.check_password(password):
+				raise forms.ValidationError("invalid username")
+		return super(LoginForm,self).clean(*args,**kwargs)
 
 class TambahFoto_Form(forms.ModelForm):
     class Meta:
@@ -57,7 +77,7 @@ class Profil_Edit_Form(forms.ModelForm):
 			'google_plus',
         ]
 		widgets = {
-        'foto_perusahaan':forms.FileInput(attrs={'class': 'fileupload','required':'False','name':'fileupload'}),
+        # 'foto_perusahaan':forms.FileInput(attrs={'class': 'fileupload','required':'False','name':'fileupload'}),
 
 		# 'deskripsi_perusahaan':forms.Textarea(attrs={'class': 'form-control','placeholder':'Deskripsi Perusahaan'}),
 	 # 	'foto1':forms.FileInput(attrs={'class': 'fileupload','name':'fileupload'}),
@@ -85,6 +105,6 @@ class Profil_Edit_Form(forms.ModelForm):
 		# 'email':forms.EmailInput(attrs={'class': 'form-control','name':'Nama'}),
 		# 'facebook':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
 		# 'twitter':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
-		'instagram':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
-		'google_plus':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
+		# 'instagram':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
+		# 'google_plus':forms.TextInput(attrs={'class': 'form-control','id':'k6','placeholder':'http://'}),
 		}

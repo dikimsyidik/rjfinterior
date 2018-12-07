@@ -296,16 +296,17 @@
     <!-- our-agent end -->
 
         <!-- testimonial-section -->
-    <section class="testimonial-section sec-pad centred" style="background-image: url(/static/images/b3.jpg);">
+   <section class="testimonial-section sec-pad centred" style="background-image: url(static/images/b3.jpg);">
         <div class="container">
             <h2 class="sec-title" style="padding-bottom: 5%">Testimoinal</h2>
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-sm-12 offset-lg-2">
                     <div class="testimonial-slider">
+                        {% for profil in profil %}
                         <div class="testimonial-content">
                             <div class="author-info">
-                                <h4>Andri, Manager Bambu Cafe</h4>
-                                <h6 style="color: #c4c413">Kitchen Set, Bambu Cafe</h6>
+                                <h4> {{ profil.nama_dan_pekerjaan }} </h4>
+                                <h6 style="color: #c4c413"> {{ profil.project_dan_asal }} </h6>
                             </div>
                             <div class="text">
                                 Saya puas dengan kitchenset dari RJF, pengerjaannya cepat, desain modern. Sukses buat RJF Interior
@@ -329,71 +330,95 @@
                                 Terima kasih RJF Interior sudah buatkan saya backdrop yang bagus dengan harga yang pas dikantong saya.
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- testimonial-section end -->
+   <!-- testimonial-section end -->
 
 
     <!-- main-footer -->
-    <footer class="main-footer">
+     <footer class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-12 footer-column">
-                    <div class="about-widget footer-widget" style="padding-right: 30px;">
-                        <div class="footer-title"><h4>ABOUT US</h4></div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="about-widget footer-widget">
+                        <div class="footer-title"><h4>RJF Interior</h4></div>
                         <div class="text" style="text-align: justify;">
-                            Kami adalah perusahaan yang bergerak di bidang jasa pembuatan produk-produk Interior dan Furniture dengan ukuran dan desian dari anda atau dari kami, Untuk Rumah tinggal, Hotel, Restaurant ,Café,apartment dll. Kami akan menggambarkan ruangan anda dengan gambar 3D, Layout ,gambar 2D. Selain itu juga kami bisa mendesain dengan mengikuti budget anda.
+                            {% for profil in profil %}
+                                        {{ profil.deskripsi_perusahaan }}
+                                        {% endfor %}
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-post footer-widget" style="padding-bottom: 30px;">
+                    <div class="footer-post footer-widget">
                         <div class="footer-title"><h4>Temukan Kami</h4></div>
                         <div class="contact-info">
                             <div class="single-item">
-                                <div class="icon-box"><i class="fa fa-phone"></i> 082338015630</div>
-                            </div>
-                            <div class="single-item">
-                                <div class="icon-box"><i class="fa fa-whatsapp"></i> 082338015630</div>
+                                <div class="icon-box"><i class="fa fa-phone"></i>
+                                {% for profil in profil %}
+                                        {{ profil.no_hp }}
+                                        {% endfor %}</div>
                             </div>
                             <div class="single-item">
                                 <div class="icon-box">
                                     <ul>
-                                        <li> <span><i class="fa fa-map-marker"></i></span> Kantor 1: Limus pratama regency Blok M2 No 15 Cilengsi Kab Bogor</li>
-                                        <li>Kantor 2 : Jl Raya Garut-Samarang, Ciroyom No 30 RT 1 RW 2 Kab Garut</li>
+                                        <li> <span><i class="fa fa-map-marker"></i></span>
+                                        {% for profil in profil %}
+                                        {{ profil.alamat }}
+                                        {% endfor %}
+
+                                        </li>
                                     </ul>                                
                                 </div>
                             </div>
                             <div class="single-item">
-                                <div class="icon-box"><i class="fa fa-envelope"></i> Ardipratama1@yahoo.com</div>
+                                <div class="icon-box"><i class="fa fa-envelope"></i>{% for profil in profil %}
+                                        {{ profil.email }}
+                                        {% endfor %}</div>
                             </div>
                         </div>
                         <ul class="footer-social">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            {% for profil in profil %}
+                            <li><a href="
+                            {{ profil.facebook }}
+                            "><i class="fa fa-facebook"></i>
+                            </a></li>
+                            <li><a href="
+                            {{ profil.twitter }}
+                            "><i class="fa fa-twitter"></i>
+                            </a></li>
+                            <li><a href="
+                            {{ profil.instagram }}
+                            "><i class="fa fa-instagram"></i>
+                            </a></li>
+                            <li><a href="
+                            {{ profil.google_plus }}
+                            "><i class="fa fa-google-plus"></i>
+                            </a></li>
+                            {% endfor %}
+
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-widget">
                     <div class="link-widget footer-widget">
                         <div class="footer-title"><h4>USEFULL LINKS</h4></div>
                         <ul class="list">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">Tentang Kami</a></li>
-                            <li><a href="gallery.html">Galeri</a></li>
-                            <li><a href="contact.html">Kontak</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- main-footer end -->
+     <!-- main-footer end -->
 
 
 
