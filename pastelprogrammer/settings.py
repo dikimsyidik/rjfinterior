@@ -27,7 +27,7 @@ SECRET_KEY = '-0%cbvdf9y=gq(^@874+^+xcv9t+22d$fj74#v19idj#=9f3de'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rjfinteriorgarut.herokuapp.com']
+ALLOWED_HOSTS = ['www.rjfinteriorgarut.com']
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = '/dashboard/'
 
