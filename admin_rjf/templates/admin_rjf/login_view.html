@@ -43,7 +43,10 @@
                 <p class="text-muted text-center btn-block btn btn-primary btn-rect">
                     Masukan username dan password
                 </p>
-                {{ form.as_p }}
+                <label for="username" >Username</label>
+                {{ form.username }}
+                <label for="password" >Password </label>
+                {{ form.password }}
                 <button class="btn text-muted text-center btn-danger" type="submit">Masuk </button>
             </form>
         </div>
