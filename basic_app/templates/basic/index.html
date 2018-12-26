@@ -118,9 +118,9 @@
                     <div class="slider-caption">
                         <div class="container">
                             <div  class="slider-content">
-                                <div class="title">RJF Interior Garut</div>
+                                <div class="title"> Jasa Interior Garut</div>
                                 <div class="text">{{ profil.alamat }}</div>
-                                <div class="motto">Terpercaya</div>
+                                <div class="motto">Berkualitas </div>
                                 <div class="link"><a href="gallery.html">Selengkapnya</a></div>
                             </div>
                         </div>                             
@@ -609,25 +609,25 @@
                                 <h6 style="color: #c4c413"> {{ profil.project_dan_asal }} </h6>
                             </div>
                             <div class="text">
-                                Saya puas dengan kitchenset dari RJF, pengerjaannya cepat, desain modern. Sukses buat RJF Interior
+                                {{ profil.komentar }}
                             </div>
                         </div>
                         <div class="testimonial-content">
                             <div class="author-info">
-                                <h4>Selia, Mahasiswa</h4>
-                                <h6 style="color: #c4c413">Rak Buku, Garut</h6>
+                                <h4> {{ profil.nama_dan_pekerjaan2 }} </h4>
+                                <h6 style="color: #c4c413"> {{ profil.project_dan_asal2 }} </h6>
                             </div>
                             <div class="text">
-                                Terima kasih RJF Interior, sekarang saya punya rak buku yang kekinian, harganya juga terjangkau.
+                                {{ profil.komentar2 }}
                             </div>
                         </div>
                         <div class="testimonial-content">
                             <div class="author-info">
-                                <h4>Hendra, Wiraswasta</h4>
-                                <h6 style="color: #c4c413">Backdrop TV, Garut</h6>
+                                <h4> {{ profil.nama_dan_pekerjaan3 }} </h4>
+                                <h6 style="color: #c4c413"> {{ profil.project_dan_asal3 }} </h6>
                             </div>
                             <div class="text">
-                                Terima kasih RJF Interior sudah buatkan saya backdrop yang bagus dengan harga yang pas dikantong saya.
+                                {{ profil.komentar3 }}
                             </div>
                         </div>
                         {% endfor %}
@@ -731,7 +731,7 @@
     <!-- footer-bottom -->
     <div class="footer-bottom centred">
         <div class="container">
-            <div class="copyright"><a href="templatespoint.net">Supported By : Pastel Programmer</a></div>
+            <div class="copyright"><a href="www.pastelprogrammer.com">Supported By : Pastel Programmer</a></div>
         </div>
     </div>
     <!-- footer-bottom end -->

@@ -19,6 +19,15 @@ def path_and_rename(instance, filename):
     return (str(instance)+".jpg")
 
 
+class KomentarSaran(models.Model):
+	nama = models.CharField(max_length=200)
+	no_hp = models.CharField(max_length=15)
+	email = models.EmailField(blank=True)
+	pesan = models.TextField()
+
+	def __str__(self):
+		return self.nama
+
 class Gallery_Foto(models.Model):
 	"""docstring for Produk"""
 		

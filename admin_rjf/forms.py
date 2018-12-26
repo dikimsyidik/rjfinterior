@@ -1,10 +1,24 @@
 from django import forms
 from django.contrib.auth import authenticate,get_user_model
 
-from .models import Gallery_Foto,Profil
+from .models import Gallery_Foto,Profil,KomentarSaran
 
 
 User = get_user_model()
+
+class FormKomentar(forms.ModelForm):
+	class Meta:
+		model = KomentarSaran
+		fields = [
+            'nama',
+            'no_hp',
+            'email',
+			'pesan', 
+		]
+		widgets = [
+		# 'nama' = forms.TextInput(attrs={'class': 'form-control','placeholder':'Nama'})
+
+		]
 
 class LoginForm(forms.Form):
 

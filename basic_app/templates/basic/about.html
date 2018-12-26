@@ -119,7 +119,9 @@
         <div class="container">
             <h2 class="sec-title">Siapa Kami?</h2>
             <div class="title-text">
-                Kami adalah perusahaan yang bergerak di bidang jasa pembuatan produk-produk Interior dan Furniture dengan ukuran dan desian dari anda atau dari kami, Untuk Rumah tinggal, Hotel, Restaurant ,Café,apartment dll. Kami akan menggambarkan ruangan anda dengan gambar 3D, Layout ,gambar 2D ,  gambar kerjadan bill of quantity sehingga anda dapat mengetahui perkerjaan dari awal sampai akhir dan mengetahui budget yang akan di keluarkan, selain itu juga kami bisa mendesain dengan mengikuti budget anda.
+                {% for profil in profil %}
+                                        {{ profil.deskripsi_perusahaan }}
+                                        {% endfor %}
             </div>
         </div>
     </section>
@@ -159,7 +161,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="single-item">
+                    <div class="single- item">
                         <div class="icon-box"><i class="fa fa-users"></i></div>
                         <h4>Tim yang Solid</h4>
                         <div class="text text-justify">Tim kami yang solid selam bertahun-tahun selalu menampilkan hasil yang memuaskan</div>
@@ -296,7 +298,7 @@
     <!-- our-agent end -->
 
         <!-- testimonial-section -->
-   <section class="testimonial-section sec-pad centred" style="background-image: url(static/images/b3.jpg);">
+     <section class="testimonial-section sec-pad centred" style="background-image: url(static/images/b3.jpg);">
         <div class="container">
             <h2 class="sec-title" style="padding-bottom: 5%">Testimoinal</h2>
             <div class="row">
@@ -309,25 +311,25 @@
                                 <h6 style="color: #c4c413"> {{ profil.project_dan_asal }} </h6>
                             </div>
                             <div class="text">
-                                Saya puas dengan kitchenset dari RJF, pengerjaannya cepat, desain modern. Sukses buat RJF Interior
+                                {{ profil.komentar }}
                             </div>
                         </div>
                         <div class="testimonial-content">
                             <div class="author-info">
-                                <h4>Selia, Mahasiswa</h4>
-                                <h6 style="color: #c4c413">Rak Buku, Garut</h6>
+                                <h4> {{ profil.nama_dan_pekerjaan2 }} </h4>
+                                <h6 style="color: #c4c413"> {{ profil.project_dan_asal2 }} </h6>
                             </div>
                             <div class="text">
-                                Terima kasih RJF Interior, sekarang saya punya rak buku yang kekinian, harganya juga terjangkau.
+                                {{ profil.komentar2 }}
                             </div>
                         </div>
                         <div class="testimonial-content">
                             <div class="author-info">
-                                <h4>Hendra, Wiraswasta</h4>
-                                <h6 style="color: #c4c413">Backdrop TV, Garut</h6>
+                                <h4> {{ profil.nama_dan_pekerjaan3 }} </h4>
+                                <h6 style="color: #c4c413"> {{ profil.project_dan_asal3 }} </h6>
                             </div>
                             <div class="text">
-                                Terima kasih RJF Interior sudah buatkan saya backdrop yang bagus dengan harga yang pas dikantong saya.
+                                {{ profil.komentar3 }}
                             </div>
                         </div>
                         {% endfor %}
@@ -335,8 +337,7 @@
                 </div>
             </div>
         </div>
-    </section>
-   <!-- testimonial-section end -->
+    </section><!-- testimonial-section end -->
 
 
     <!-- main-footer -->
