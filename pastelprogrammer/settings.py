@@ -25,9 +25,9 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 SECRET_KEY = '-0%cbvdf9y=gq(^@874+^+xcv9t+22d$fj74#v19idj#=9f3de'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.rjfinteriorgarut.com']
+ALLOWED_HOSTS = ['*']
 LOGIN_URL = "/login/"
 LOGIN_REDIRECT_URL = '/dashboard/'
 
