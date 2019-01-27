@@ -130,5 +130,6 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
 MEDIA_URL = '/static/post_thumbnail//'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/post_thumbnail')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/post_thumbnail')
+MEDIA_ROOT = os.path.join(BASE_DIR, "..", "www", "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files")
