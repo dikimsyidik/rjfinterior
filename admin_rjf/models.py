@@ -6,7 +6,9 @@ from django.dispatch import receiver
  
 KATEGORI_PRODUK = [
         ('backdrop', 'Back Drop'),
-        ('bedroom', 'Bedroom'),
+        ('bedroom', 'Kamar'),
+        ('kitchen_set', 'Kitchen Set'),
+        ('ruang_keluarga', 'Ruang Keluarga'),
         ('meja_meeting', 'Meja Meeting'),
         ('front_office', 'Front Office'),
 		('rak', 'Rak'),

@@ -322,7 +322,7 @@
                 <div class="tab-content" id="details">
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12">
-                            <figure class="img-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="{% static "images/5.jpeg" %}" alt=""></figure>
+                            <figure class="img-box wow slideInLeft" data-wow-delay="0ms" data-wow-duration="1500ms"><img src="{{ profil.foto1.url }}" alt=""></figure>
                         </div>
                         <div class="col-lg-7 col-md-12 col-sm-12">
                             <div class="content-box">
@@ -337,7 +337,7 @@
                 <div class="tab-content" id="review">
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12">
-                            <figure class="img-box"><img src="{% static "images/18.jpg" %}" alt=""></figure>
+                            <figure class="img-box"><img src="{{ profil.foto2.url }}" alt=""></figure>
                         </div>
                         <div class="col-lg-7 col-md-12 col-sm-12">
                             <div class="content-box">
@@ -354,11 +354,11 @@
                 <div class="tab-content" id="review1">
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-sm-12">
-                            <figure class="img-box"><img src="{% static "images/6.jpg" %}" alt=""></figure>
+                            <figure class="img-box"><img src="{{ profil.foto3.url }}" alt=""></figure>
                         </div>
                         <div class="col-lg-7 col-md-12 col-sm-12">
                             <div class="content-box">
-                                <h4>                                    {{ profil.nama_produk2 }}
+                                <h4>                                    {{ profil.nama_produk3 }}
 </h4>
                                 <div class="text">
                                                                         {{ profil.deskripsi_produk3 }}
@@ -384,18 +384,79 @@
     <section class="gallery-section sec-pad">
         <div class="container">
             <h2 class="sec-title centred">Galeri Foto</h2>
-            <div class="title-text centred">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,<br />sed quia consequuntur magni dolores eos qui ratione</div>
+           
             <div class="sortable-masonry mixed-gallery-section">
                 <ul class="filter-tabs filter-btns post-filter centred">
-                    <li class="active filter" data-role="button" data-filter=".all">BackDrop</li>
-                    <li class="filter" data-role="button" data-filter=".branding">Bed Room</li>
-                    <li class="filter" data-role="button" data-filter=".design">Living Room</li>
+                    <li class="filter" data-role="button" data-filter=".all">BackDrop</li>
+                    <li class="filter" data-role="button" data-filter=".kitchen">Kitchen Set</li>
+                    <li class="filter" data-role="button" data-filter=".branding">Kamar</li>
+                    <li class="filter" data-role="button" data-filter=".design">Ruang Keluarga</li>
                     <li class="filter" data-role="button" data-filter=".development">Meja Meeting</li>
                     <li class="filter" data-role="button" data-filter=".others">Front Office</li>
                     <li class="filter" data-role="button" data-filter=".rak">Rak</li>
                     <li class="filter" data-role="button" data-filter=".tangga">Tangga</li>
                 </ul>
                 <div class="row items-container clearfix">
+                    {% for mm in meja_meeting %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item design">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ mm.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ mm.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ mm.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for rk in ruang_keluarga %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item design">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ rk.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ rk.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ rk.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for ks in kitchen_set %}
+                    <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item kitchen">
+                        <div class="single-item">
+                            <figure class="img-box">
+                                <img src="{{ ks.post_thumbnail.url }}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="overlay-inner">
+                                    <div class="overlay-content">
+                                        <h4><a href="#">{{ ks.produk }}</a></h4>
+                                        <ul class="list">
+                                            <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="{{ ks.post_thumbnail.url }}" class="lightbox-image"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
                     {% for br in backdrop %}
                 
                     <div class="col-lg-4 col-md-6 col-sm-12 default-portfolio-item masonry-item all">
@@ -524,77 +585,7 @@
 
 
     <!-- our-agent -->
-    <section class="our-agent centred">
-        <div class="container">
-            <h2 class="sec-title">Tim Kami</h2>
-            <div class="title-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed<br />quia consequuntur magni dolores eos qui ratione</div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
-                    <div class="single-item">
-                        <ul class="agent-social">
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                        <figure class="img-box"><a href="#"><img src="images/resource/team-1.jpg" alt=""></a></figure>
-                        <div class="lower-content">
-                            <h4><a href="#">Alvis Milan</a></h4>
-                            <div class="text">Real estate agent</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
-                    <div class="single-item">
-                        <ul class="agent-social">
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                        <figure class="img-box"><a href="#"><img src="images/resource/team-2.jpg" alt=""></a></figure>
-                        <div class="lower-content">
-                            <h4><a href="#">Jhon Doe</a></h4>
-                            <div class="text">Real estate agent</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
-                    <div class="single-item">
-                        <ul class="agent-social">
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                        <figure class="img-box"><a href="#"><img src="images/resource/team-3.jpg" alt=""></a></figure>
-                        <div class="lower-content">
-                            <h4><a href="#">Hugo Smith</a></h4>
-                            <div class="text">Real estate agent</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 agent-column">
-                    <div class="single-item">
-                        <ul class="agent-social">
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        </ul>
-                        <figure class="img-box"><a href="#"><img src="images/resource/team-4.jpg" alt=""></a></figure>
-                        <div class="lower-content">
-                            <h4><a href="#">Jenny Salvia</a></h4>
-                            <div class="text">Real estate agent</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- our-agent end -->
-
-
+  
     <!-- testimonial-section -->
    <section class="testimonial-section sec-pad centred" style="background-image: url(static/images/b3.jpg);">
         <div class="container">

@@ -7,10 +7,15 @@ from admin_rjf.forms import FormKomentar
 
 def index(requset):
 	backdrop = Gallery_Foto.objects.filter(kategori='backdrop')
+	kitchen_set = Gallery_Foto.objects.filter(kategori='kitchen set')
+	ruang_keluarga = Gallery_Foto.objects.filter(kategori='ruang_keluarga')
+	galery = Gallery_Foto.objects.all()
+
+
 	meja_meeting = Gallery_Foto.objects.filter(kategori='meja_meeting')
 	bedroom = Gallery_Foto.objects.filter(kategori='bedroom')
 	front_office = Gallery_Foto.objects.filter(kategori='front_office')
-	rak = Gallery_Foto.objects.filter(kategori='Rak')
+	rak = Gallery_Foto.objects.filter(kategori='rak')
 	tangga = Gallery_Foto.objects.filter(kategori='tangga')
 
 	profil = Profil.objects.all()
@@ -19,15 +24,18 @@ def index(requset):
 	context = {
 		'backdrop':backdrop,		
 		'foto':bedroom,
+		'kitchen_set':kitchen_set,
+		'ruang_keluarga':ruang_keluarga,
 		'meja_meeting':meja_meeting,
 		'front_office':front_office,
 		'rak':rak,
 		'tangga':tangga,
 		'profil':profil,
 		}
-	print(type(rak))
-	print(bedroom)
-
+	for g in galery:
+		print(g)
+	print(galery.filter(kategori='rak'))
+	print(rak)
 	return render(requset,template,context)
 def tentang_kami(requset):
 	backdrop = Gallery_Foto.objects.filter(kategori='backdrop')
@@ -57,17 +65,25 @@ def tentang_kami(requset):
 	return render(requset,template,context)
 def gallery(requset):
 	backdrop = Gallery_Foto.objects.filter(kategori='backdrop')
+	kitchen_set = Gallery_Foto.objects.filter(kategori='kitchen set')
+	ruang_keluarga = Gallery_Foto.objects.filter(kategori='ruang_keluarga')
+	galery = Gallery_Foto.objects.all()
+
+
 	meja_meeting = Gallery_Foto.objects.filter(kategori='meja_meeting')
 	bedroom = Gallery_Foto.objects.filter(kategori='bedroom')
 	front_office = Gallery_Foto.objects.filter(kategori='front_office')
-	rak = Gallery_Foto.objects.filter(kategori='Rak')
+	rak = Gallery_Foto.objects.filter(kategori='rak')
 	tangga = Gallery_Foto.objects.filter(kategori='tangga')
 
 	profil = Profil.objects.all()
 
+	template = 'basic/index.html'
 	context = {
 		'backdrop':backdrop,		
 		'foto':bedroom,
+		'kitchen_set':kitchen_set,
+		'ruang_keluarga':ruang_keluarga,
 		'meja_meeting':meja_meeting,
 		'front_office':front_office,
 		'rak':rak,
